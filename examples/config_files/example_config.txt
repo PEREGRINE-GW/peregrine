@@ -1,0 +1,113 @@
+[SOURCE]
+source_type = BBH
+aligned_spins = False
+
+[WAVEFORM PARAMS]
+sampling_frequency = 2048
+duration = 4
+start_offset = 2
+start = -2
+waveform_apprx = SEOBNRv4PHM
+minimum_frequency = 20
+maximum_frequency = 1024
+reference_frequency = 50
+ifo_list = H1,L1,V1
+ifo_noise = True
+
+[INJECTION]
+mass_1 = 39.53573995392598
+mass_2 = 34.8722208102226
+mass_ratio = 0.8857620985418904
+chirp_mass = 32.136969061169324
+luminosity_distance = 900
+dec = 0.07084716171380845
+ra = 5.555599820502261
+theta_jn = 0.44320777946320117
+psi = 1.0995170458005799
+phase = 5.089358282766109
+tilt_1 = 1.4974326044527126
+tilt_2 = 1.1019600169566186
+a_1 = 0.9701993491043245
+a_2 = 0.8117959745751914
+phi_12 = 6.220246980963511
+phi_jl = 1.884805935473119
+geocent_time = 0.0
+
+[INT PRIORS]
+mass_ratio = 0.125,1.0
+chirp_mass = 25,100
+theta_jn = 0.0,3.14159
+phase = 0.0,6.28318
+tilt_1 = 0.0,3.14159
+tilt_2 = 0.0,3.14159
+a_1 = 0.05,1.0
+a_2 = 0.05,1.0
+phi_12 = 0.0,6.28318
+phi_jl = 0.0,6.28318
+
+[INT DISTRIBUTIONS]
+mass_ratio = Uniform,reflective
+chirp_mass = Uniform,reflective
+
+[EXT PRIORS]
+luminosity_distance = 100,1500
+dec = -1.57079,1.57079
+ra = 0.0,6.28318
+psi = 0.0,3.14159
+geocent_time = -0.1,0.1
+
+[EXT DISTRIBUTIONS]
+geocent_time = Uniform,
+
+[ZARR PARAMS]
+run_id = test_new_install
+use_zarr = True
+sim_schedule = 30_000,60_000,60_000,120_000,120_000,150_000,150_000,150_000
+chunk_size = 1000
+run_parallel = True
+njobs = 16
+targets = z_int,z_ext,z_total,d_t,d_f,d_f_w,n_t,n_f,n_f_w
+store_path = tmnre_store/test_new_install
+run_description = 15D test for precessing BBH with high spin and low S/N
+
+[TMNRE]
+num_rounds = 8
+1d_only = True
+infer_only = True
+marginals = (0,1)
+bounds_th = 1e-5
+resampler = False
+shuffling = True
+noise_targets = n_t,n_f_w
+generate_obs = False
+obs_path = tmnre_store/test_new_install/observation_test_new_install
+
+[SAMPLING]
+sampler = dynesty
+npoints = 2000
+nsamples = 2000
+printdt = 5
+walks = 100
+nact = 10
+ntemps = 10
+nlive = 2000
+nwalkers = 10
+distance = False
+time = False
+phase = True
+resume_from_ckpt = True
+
+[HYPERPARAMS]
+min_epochs = 1
+max_epochs = 100
+early_stopping = 7
+learning_rate = 5e-4
+num_workers = 8
+training_batch_size = 128
+validation_batch_size = 128
+train_data = 0.9
+val_data = 0.1
+
+[DEVICE PARAMS]
+device = gpu
+n_devices = 1
