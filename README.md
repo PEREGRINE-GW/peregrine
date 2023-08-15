@@ -19,6 +19,17 @@
     year = "2023"
 }
 ```
+```
+@article{Alvey:2023naa,
+    author = "Alvey, James and Bhardwaj, Uddipta and Nissanke, Samaya and Weniger, Christoph",
+    title = "{What to do when things get crowded? Scalable joint analysis of overlapping gravitational wave signals}",
+    eprint = "2308.06318",
+    archivePrefix = "arXiv",
+    primaryClass = "gr-qc",
+    month = "8",
+    year = "2023"
+}
+```
 
 ## Recommended Installation Instructions
 
