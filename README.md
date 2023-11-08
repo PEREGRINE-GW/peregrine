@@ -48,7 +48,7 @@ git clone git@github.com:PEREGRINE-GW/peregrine.git
 ```
 - Install the relevant packages including e.g. `swyft` and GW specific analysis tools
 ```
-pip install git+https://github.com/undark-lab/swyft.git
+pip install git+https://github.com/undark-lab/swyft.git@f036b15dab0664614b3e3891dd41e25f6f0f230f
 pip install tensorboard psutil gwpy lalsuite bilby
 ```
 
