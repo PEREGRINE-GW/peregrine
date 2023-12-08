@@ -49,7 +49,7 @@ git clone git@github.com:PEREGRINE-GW/peregrine.git
 - Install the relevant packages including e.g. `swyft` and GW specific analysis tools
 ```
 pip install git+https://github.com/undark-lab/swyft.git@f036b15dab0664614b3e3891dd41e25f6f0f230f
-pip install tensorboard psutil gwpy lalsuite bilby
+pip install tensorboard psutil gwpy lalsuite bilby>=2.1.2
 ```
 
 ## Running peregrine
@@ -84,5 +84,5 @@ Result output:
 - `overlapping` - analysis for multiple GWs in a 2G detector
 
 ## Release Details:
-- v0.0.1 | *August 2023* | Public PEREGRINE release matching companion paper: 
+- v0.0.1 | *August 2023* | Public PEREGRINE release matching companion paper:
     - [Peregrine: Sequential simulation based inference for gravitational waves](https://arxiv.org/abs/2304.02035)
