@@ -1,6 +1,9 @@
 <img align="center" height="200" src="./images/peregrine_logo.png">
 
 [![version](https://img.shields.io/badge/version-0.0.1-blue)](https://github.com/PEREGRINE-GW/peregrine) [![DOI](https://img.shields.io/badge/DOI-arXiv.2304.02035-brightgreen)](https://arxiv.org/abs/2304.02035)
+
+## v0.0.2 available soon (end of March 2024) | currently under development (use cbc or overlapping branch for now)
+
 ## Description
 
 - **PEREGRINE** is a Simulation-based Inference (SBI) library designed to perform analysis on a wide class of gravitational wave signals. It is built on top of the [swyft](https://swyft.readthedocs.io/en/) code, which implements neural ratio estimation to efficiently access marginal posteriors for all parameters of interest.
