@@ -2,7 +2,7 @@
 
 [![version](https://img.shields.io/badge/version-0.0.1-blue)](https://github.com/PEREGRINE-GW/peregrine) [![DOI](https://img.shields.io/badge/DOI-arXiv.2304.02035-brightgreen)](https://arxiv.org/abs/2304.02035)
 
-## v0.0.2 available soon (end of March 2024) | currently under development (use cbc or overlapping branch for now)
+## v0.0.2 available soon | currently under development (use cbc or overlapping branch for now)
 
 ## Description
 
